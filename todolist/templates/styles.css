@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+.dropdown{
+    display: inline-block;
+}
+.dropdown:hover{
+    background-color: #e3e3e3;
+}
+.dropdown .radio{
+    display: hidden;
+}

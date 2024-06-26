@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(88, 88, 88);
+        }
+        #completed{
+            text-align: center;
+        }
+        #check:visited{
+            text-size-adjust: 2em;
+        }
+        #stuff{
+            position: static;
+        }
+        div{
+            background-color: rgb(45, 45, 45);
+        }
+        .dropdown .drop{
+            text-align: center;
+            display: block;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+        }
+        .dropdown #stuff{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+            font-size: large;
+            text-align: center;
+            cursor: pointer;
+        }
+        .dropdown .radio{
+            display: none;
+            text-align: center;
+        }
+        .dropdown:hover .radio{
+            transition: 0.5s;
+            text-align: center;
+            display: block;
+        }
+        .dropdown .drop:hover{
+            display: block;
+            background-color: rgb(50, 50, 50);
+            text-align: center;
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>

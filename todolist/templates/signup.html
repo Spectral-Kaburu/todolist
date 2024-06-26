@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+    <form action="/signup" method="post">
+        <input type="text" name="username" id="username">
+        <button>Submit</button>
+    </form>
+
+    <a href="/login">Already have an account?</a>
+
+{% endblock %}

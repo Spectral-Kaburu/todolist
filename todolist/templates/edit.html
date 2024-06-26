@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<p>{{task}}</p>
+
+    <form action="/edit/{{list_id}}" method="post">
+        <input type="text" name="task" id="task" placeholder="{{task}}">
+        <button>Submit</button>
+    </form>
+
+
+{% endblock %}

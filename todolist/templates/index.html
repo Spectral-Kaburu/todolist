@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% if list %}
+
+    <ol>
+        {% for stuff in list %}
+            <hr>
+            <div class="dropdown">
+                <li id="stuff">{{stuff[1]}}</li>
+
+                <div class="radio">
+                    <a class="drop" href="" id="check">✅</a><br>
+                    <a class="drop" href="/edit/{{stuff[0]}}">Edit</a><br>
+                    <a class="drop" href="/delete/{{stuff[0]}}">Delete</a><br>
+                </div>
+            </div>
+            
+            
+        {% endfor %}
+    </ol>
+    
+{% endif %}
+<form action="/list" method="post">
+    <input type="text" name="add" id="add">
+    <button>Submit</button>
+</form>
+
+{% endblock %}
